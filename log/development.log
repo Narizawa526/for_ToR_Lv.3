@@ -458,3 +458,347 @@ Processing by UsersController#show as JSON
 Completed 200 OK in 47ms (Views: 3.4ms | ActiveRecord: 45.3ms)
 
 
+Started PATCH "/users/1.json" for ::1 at 2020-05-09 23:56:17 +0900
+  [1m[35m (4.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `protect_form_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:2:in `<main>'
+Started PATCH "/users/1.json" for ::1 at 2020-05-09 23:58:04 +0900
+  
+ActionController::RoutingError (undefined method `protect_form_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/1.json" for ::1 at 2020-05-09 23:59:08 +0900
+  
+ActionController::RoutingError (undefined method `protect_form_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started PATCH "/users/1.json" for ::1 at 2020-05-10 18:00:16 +0900
+  [1m[35m (5.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"account"=>"chinju", "name"=>"珍獣", "email"=>"chinju@example.com", "created_at"=>"2017-12-01 00:00:00 +0900"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :created_at
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :created_at
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Exists (4.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'chinju' AND `users`.`id` != 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 840154ms (ActiveRecord: 96.5ms)
+
+
+Started DELETE "/users/1.json" for ::1 at 2020-05-10 18:15:49 +0900
+  [1m[35m (3.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/base.rb:129:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.2/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:675:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/1.json" for ::1 at 2020-05-10 18:16:33 +0900
+Processing by UsersController#destroy as JSON
+  Parameters: {"user"=>{"account"=>"chinju", "name"=>"珍獣", "email"=>"chinju@example.com", "created_at"=>"2017-12-01 00:00:00 +0900"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Destroy (4.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:17
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 120ms (ActiveRecord: 73.6ms)
+
+
+Started DELETE "/users/2.json" for ::1 at 2020-05-10 18:24:24 +0900
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#destroy as JSON
+  Parameters: {"user"=>{"account"=>"chinju", "name"=>"珍獣", "email"=>"chinju@example.com", "created_at"=>"2017-12-01 00:00:00 +0900"}, "id"=>"2"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Destroy (3.6ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 2[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 69.8ms)
+
+
+Started POST "/users.json" for ::1 at 2020-05-10 18:27:40 +0900
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"account"=>"chinju20190201", "name"=>"珍獣", "email"=>"chinju@example.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.2/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:675:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users.json" for ::1 at 2020-05-10 18:30:33 +0900
+  
+ActionController::RoutingError (undefined method `protection_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users.json" for ::1 at 2020-05-10 18:30:54 +0900
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"account"=>"chinju20190201", "name"=>"珍獣", "email"=>"chinju@example.com"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (4.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'chinju20190201' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('chinju20190201', '珍獣', '2020-05-10 09:30:54', '2020-05-10 09:30:54', 'chinju@example.com')[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 110ms (ActiveRecord: 68.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-10 18:32:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-05-10 18:32:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 404 Not Found in 13ms (ActiveRecord: 9.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:29:in `set_user'
+Started GET "/users/3" for ::1 at 2020-05-10 18:32:44 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 406 Not Acceptable in 71ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/base.rb:194:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:132:in `run_callbacks'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.2/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.2/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:675:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.4/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/3.json" for ::1 at 2020-05-10 18:33:09 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 36ms (Views: 13.5ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/users/5.json" for ::1 at 2020-05-10 18:33:15 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 18ms (Views: 3.8ms | ActiveRecord: 11.6ms)
+
+
