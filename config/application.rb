@@ -21,6 +21,7 @@ module ForTorLv3
       g.stylesheets false
       g.helper false
       g.test_framework false
+      g.test_framework :rspec
     end
     config.api_only = true
     config.middleware.use ActionDispatch::Flash
