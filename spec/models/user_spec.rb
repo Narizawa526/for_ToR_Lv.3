@@ -1,16 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  context "account を指定しているとき" do
+  context "accountを指定しているとき" do
     it "ユーザーが作られる" do
-      user = User.new(name: "hiroaki", account: "hiroaki", email: "hiroaki@example.com")
+      user = create(:user)
       expect(user).to be_valid
     end
   end
   
   context "accountを指定していないとき"do
     it "エラーする"do
-      user = User.new(name: "hiroaki", account: nil, email: "hiroaki@example.com")
+      user = build(:user, account: nil)
                 #変数userにaccountの値を欠いた、新しいインスタンスを代入。
       user.valid?  #userにバリデーションを行う。
 
@@ -21,12 +21,14 @@ RSpec.describe User, type: :model do
 
   context "同名のaccountが存在するとき"do
     it "エラーする"do
-      User.create!(name: "hiroaki", account: "hiroaki", email:"hiroaki@example.com")
-      user = User.new(name: "garoad", account: "hiroaki", email: "gandum.uruyo@gandumx.com")
+      create(:user, account: "hiroaki")
+            #インスタンスを作成する。
+      user = build(:user, account: "hiroaki")
+            #accountが被るように新規作成。
       user.valid?
-
+            #userにバリデーションを行う。
       expect(user.errors.messages[:account]).to include "has already been taken"
-      
+            #エラーメッセージが含まれているか？
     end
   end
 
