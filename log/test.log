@@ -259,3 +259,750 @@
   [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[36mUser Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hiroaki' LIMIT 1[0m
   [1m[35m (6.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (15.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'criselda.lemke' LIMIT 1[0m
+  [1m[36mUser Create (14.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('criselda.lemke', '橋本 美桜', '2020-05-14 16:03:26', '2020-05-14 16:03:26', 'doretha@kihnweimann.biz')[0m
+  [1m[35m (5.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'criselda.lemke' AND `users`.`id` != 6 LIMIT 1[0m
+  [1m[35m (5.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` IS NULL LIMIT 1[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hiroaki' LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('hiroaki', '村上 凛', '2020-05-14 16:03:26', '2020-05-14 16:03:26', 'elton.zulauf@considine.name')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hiroaki' LIMIT 1[0m
+  [1m[35m (6.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 01:03:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 285ms (Views: 279.5ms | ActiveRecord: 3.1ms)
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 01:04:01 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 144ms (Views: 134.6ms | ActiveRecord: 7.1ms)
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 01:04:32 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 197ms (Views: 185.9ms | ActiveRecord: 9.3ms)
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (5.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'roger_purdy' LIMIT 1[0m
+  [1m[36mUser Create (9.7ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('roger_purdy', '石田 優奈', '2020-05-15 11:32:29', '2020-05-15 11:32:29', 'rodney_kris@reichert.co')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'roger_purdy' AND `users`.`id` != 8 LIMIT 1[0m
+  [1m[35m (6.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` IS NULL LIMIT 1[0m
+  [1m[35m (3.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'stevie' LIMIT 1[0m
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('stevie', '菅原 大樹', '2020-05-15 11:51:35', '2020-05-15 11:51:35', 'nellie@steuber.name')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'stevie' AND `users`.`id` != 9 LIMIT 1[0m
+  [1m[35m (9.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` IS NULL LIMIT 1[0m
+  [1m[35m (3.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'jordan' LIMIT 1[0m
+  [1m[36mUser Create (6.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('jordan', '野村 悠', '2020-05-15 11:53:30', '2020-05-15 11:53:30', 'parker@oreilly.biz')[0m
+  [1m[35m (5.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'vaughn.daniel' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('vaughn.daniel', '中村 彩花', '2020-05-15 11:59:47', '2020-05-15 11:59:47', 'darrel.shields@mantecain.org')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'vaughn.daniel' AND `users`.`id` != 11 LIMIT 1[0m
+  [1m[35m (13.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` IS NULL LIMIT 1[0m
+  [1m[35m (4.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (7.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'alaine.koepp' LIMIT 1[0m
+  [1m[36mUser Create (5.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('alaine.koepp', '森 美月', '2020-05-15 11:59:55', '2020-05-15 11:59:55', 'shelli@batz.io')[0m
+  [1m[35m (5.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (7.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'lon.nikolaus' LIMIT 1[0m
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('lon.nikolaus', '松田 智子', '2020-05-15 11:59:59', '2020-05-15 11:59:59', 'fermin.schultz@senger.name')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (4.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'rashida' LIMIT 1[0m
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('rashida', '横山 茜', '2020-05-15 12:00:08', '2020-05-15 12:00:08', 'shaun_johns@kerluke.co')[0m
+  [1m[35m (6.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (4.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'bettie' LIMIT 1[0m
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('bettie', '石井 七海', '2020-05-15 12:09:23', '2020-05-15 12:09:23', 'bonnie@oreillyschiller.info')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'bettie' AND `users`.`id` != 15 LIMIT 1[0m
+  [1m[35m (4.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'daryl' LIMIT 1[0m
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('daryl', '松井 桜', '2020-05-15 12:09:49', '2020-05-15 12:09:49', 'brain@gleason.com')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'daryl' AND `users`.`id` != 16 LIMIT 1[0m
+  [1m[35m (10.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` IS NULL LIMIT 1[0m
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (5.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hiroaki' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('hiroaki', '石川 美優', '2020-05-15 12:09:49', '2020-05-15 12:09:49', 'fritz@gaylordpacocha.org')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hiroaki' LIMIT 1[0m
+  [1m[35m (5.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 21:09:49 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (5.3ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 3.7ms)
+  [1m[35m (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 21:11:38 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (9.4ms)
+Completed 200 OK in 19ms (Views: 7.0ms | ActiveRecord: 7.7ms)
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 21:11:55 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (11.4ms)
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 10.0ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 21:46:01 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (6.6ms)
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 5.2ms)
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 21:52:06 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (6.5ms)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 5.1ms)
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'vance' LIMIT 1[0m
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('vance', '加藤 七海', '2020-05-15 13:24:37', '2020-05-15 13:24:37', 'benita_casper@kaulkequigley.co')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'lois_wehner' LIMIT 1[0m
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('lois_wehner', '渡辺 愛', '2020-05-15 13:24:37', '2020-05-15 13:24:37', 'paige.grant@macgyverhartmann.org')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'man_harris' LIMIT 1[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('man_harris', '河野 大輝', '2020-05-15 13:24:37', '2020-05-15 13:24:37', 'christin@beahan.org')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-15 22:24:37 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (5.4ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 2.9ms)
+  [1m[35m (12.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (6.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'laila' LIMIT 1[0m
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('laila', '小野 美優', '2020-05-16 01:33:01', '2020-05-16 01:33:01', 'wen@breitenberg.co')[0m
+  [1m[35m (6.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'enriqueta_pfeffer' LIMIT 1[0m
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('enriqueta_pfeffer', '山田 一郎', '2020-05-16 01:33:01', '2020-05-16 01:33:01', 'shon_jones@grady.biz')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'theo' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('theo', '石川 悠', '2020-05-16 01:33:01', '2020-05-16 01:33:01', 'gustavo@heaney.name')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:33:01 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.5ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 2.4ms)
+  [1m[35m (6.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'je' LIMIT 1[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('je', '林 太一', '2020-05-16 01:33:13', '2020-05-16 01:33:13', 'michael@lefflermertz.org')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'lyda_barrows' LIMIT 1[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('lyda_barrows', '阿部 大輔', '2020-05-16 01:33:13', '2020-05-16 01:33:13', 'juan.pollich@terryosinski.io')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'lovie' LIMIT 1[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('lovie', '増田 悠太', '2020-05-16 01:33:13', '2020-05-16 01:33:13', 'lonnie.swift@kuphal.net')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'daniela' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('daniela', '小山 諒', '2020-05-16 01:33:54', '2020-05-16 01:33:54', 'ruel_zulauf@haley.com')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'chaya' LIMIT 1[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('chaya', '野口 陽太', '2020-05-16 01:33:54', '2020-05-16 01:33:54', 'porter@okeefelabadie.co')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'nelle' LIMIT 1[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('nelle', '工藤 隼人', '2020-05-16 01:33:54', '2020-05-16 01:33:54', 'jc_wilkinson@christiansen.org')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:33:54 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.2ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.8ms)
+  [1m[35m (5.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'demarcus' LIMIT 1[0m
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('demarcus', '小島 優花', '2020-05-16 01:43:56', '2020-05-16 01:43:56', 'myriam_hamill@okeefe.info')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'hal' LIMIT 1[0m
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('hal', '高田 美月', '2020-05-16 01:43:56', '2020-05-16 01:43:56', 'felicia_pagac@bauch.name')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'mickey.kutch' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('mickey.kutch', '丸山 芽衣', '2020-05-16 01:43:56', '2020-05-16 01:43:56', 'paulita.spinka@nitzsche.co')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:43:56 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (6.0ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 3.6ms)
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'thanh_kemmer' LIMIT 1[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('thanh_kemmer', '山下 美穂', '2020-05-16 01:44:13', '2020-05-16 01:44:13', 'shea_cummings@williamson.co')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'delmar.block' LIMIT 1[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('delmar.block', '清水 恵', '2020-05-16 01:44:13', '2020-05-16 01:44:13', 'oliva@grant.biz')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'erinn' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('erinn', '福田 愛', '2020-05-16 01:44:13', '2020-05-16 01:44:13', 'vina_kertzmann@thompson.net')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:44:13 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.2ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 2.6ms)
+  [1m[35m (5.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (4.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'rex.kuvalis' LIMIT 1[0m
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('rex.kuvalis', '横山 杏奈', '2020-05-16 01:47:10', '2020-05-16 01:47:10', 'terrell@zulaufarmstrong.co')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'jeramy' LIMIT 1[0m
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('jeramy', '大塚 凛', '2020-05-16 01:47:10', '2020-05-16 01:47:10', 'kraig_yundt@heathcoteokeefe.info')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'josh_bartell' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('josh_bartell', '岡本 恵', '2020-05-16 01:47:10', '2020-05-16 01:47:10', 'dominica@farrell.name')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:47:10 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.7ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 2.4ms)
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'raphael_toy' LIMIT 1[0m
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('raphael_toy', '木下 太郎', '2020-05-16 01:51:49', '2020-05-16 01:51:49', 'celine@brekke.name')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'babette_casper' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('babette_casper', '井上 響', '2020-05-16 01:51:49', '2020-05-16 01:51:49', 'darren.ruecker@boehm.com')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'jae' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('jae', '上田 明日香', '2020-05-16 01:51:49', '2020-05-16 01:51:49', 'hilton@hermiston.co')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:51:49 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.9ms)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 2.5ms)
+  [1m[35m (5.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'harris' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('harris', '武田 悠', '2020-05-16 01:54:02', '2020-05-16 01:54:02', 'ceola@hilpert.name')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'abby' LIMIT 1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('abby', '木下 優斗', '2020-05-16 01:54:02', '2020-05-16 01:54:02', 'lorette@paucek.biz')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'shirley' LIMIT 1[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('shirley', '増田 遼', '2020-05-16 01:54:02', '2020-05-16 01:54:02', 'meridith.jakubowski@cruickshank.biz')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 10:54:02 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.8ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 2.5ms)
+  [1m[35m (6.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'nia_okuneva' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('nia_okuneva', '遠藤 直樹', '2020-05-16 02:29:16', '2020-05-16 02:29:16', 'marion.price@volkmangibson.name')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'norman' LIMIT 1[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('norman', '工藤 健太', '2020-05-16 02:29:16', '2020-05-16 02:29:16', 'norine.schuster@bradtke.io')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'eboni.cronin' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('eboni.cronin', '加藤 蓮', '2020-05-16 02:29:16', '2020-05-16 02:29:16', 'shona_casper@rohantreutel.co')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 11:29:16 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (5.3ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 2.4ms)
+  [1m[35m (5.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'jefferey' LIMIT 1[0m
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('jefferey', '森田 彩', '2020-05-16 02:29:16', '2020-05-16 02:29:16', 'cinderella_mraz@wymanwillms.co')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/48" for 127.0.0.1 at 2020-05-16 11:29:16 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 48 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 5.8ms)
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'kristen.runolfon' LIMIT 1[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('kristen.runolfon', '山口 愛美', '2020-05-16 02:34:23', '2020-05-16 02:34:23', 'lesia.mills@daughertydoyle.com')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'royce_haley' LIMIT 1[0m
+  [1m[36mUser Create (4.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('royce_haley', '井上 健太', '2020-05-16 02:34:23', '2020-05-16 02:34:23', 'sherice@abernathydare.name')[0m
+  [1m[35m (3.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'debbra' LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('debbra', '高橋 優衣', '2020-05-16 02:34:23', '2020-05-16 02:34:23', 'wallace@mccluremurazik.name')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 11:34:23 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (6.0ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 3.6ms)
+  [1m[35m (5.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'cristopher.vonrueden' LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('cristopher.vonrueden', '千葉 翼', '2020-05-16 02:34:23', '2020-05-16 02:34:23', 'adeline@wilkinsongoyette.co')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/52" for 127.0.0.1 at 2020-05-16 11:34:23 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 52 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 2.9ms)
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'bonnie.lynch' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('bonnie.lynch', '金子 凛', '2020-05-16 02:34:33', '2020-05-16 02:34:33', 'greg_murphy@gerhold.net')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'gabriel' LIMIT 1[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('gabriel', '小山 愛子', '2020-05-16 02:34:33', '2020-05-16 02:34:33', 'verona.veum@thompson.org')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'martina_friesen' LIMIT 1[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('martina_friesen', '藤原 千尋', '2020-05-16 02:34:33', '2020-05-16 02:34:33', 'annamaria@hackett.com')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 11:34:33 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.7ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 2.2ms)
+  [1m[35m (5.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'daine.windler' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('daine.windler', '坂本 舞', '2020-05-16 02:34:33', '2020-05-16 02:34:33', 'valentin@schmeler.com')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/56" for 127.0.0.1 at 2020-05-16 11:34:33 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 56 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 2.4ms)
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'marine' LIMIT 1[0m
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('marine', '武田 結衣', '2020-05-16 03:00:15', '2020-05-16 03:00:15', 'isaiah.pacocha@pouros.io')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'gil_weimann' LIMIT 1[0m
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('gil_weimann', '斉藤 瑛太', '2020-05-16 03:00:15', '2020-05-16 03:00:15', 'ailene@romaguera.com')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (4.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'clarine.okuneva' LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('clarine.okuneva', '今井 拓海', '2020-05-16 03:00:15', '2020-05-16 03:00:15', 'samual@wisozk.co')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 12:00:15 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (6.0ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 3.3ms)
+  [1m[35m (6.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'anita_batz' LIMIT 1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('anita_batz', '西村 美穂', '2020-05-16 03:00:15', '2020-05-16 03:00:15', 'philomena.lueilwitz@glover.io')[0m
+  [1m[35m (3.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/60" for 127.0.0.1 at 2020-05-16 12:00:15 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 60 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 2.5ms)
+  [1m[35m (5.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'courtney' LIMIT 1[0m
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('courtney', '今井 葵', '2020-05-16 03:06:25', '2020-05-16 03:06:25', 'orlando@parisian.biz')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'shaun.grant' LIMIT 1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('shaun.grant', '大塚 亮太', '2020-05-16 03:06:25', '2020-05-16 03:06:25', 'nam_johns@roweschiller.biz')[0m
+  [1m[35m (4.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'caleb.auer' LIMIT 1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('caleb.auer', '原 未来', '2020-05-16 03:06:25', '2020-05-16 03:06:25', 'lanie@konopelski.biz')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 12:06:25 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (5.6ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 2.8ms)
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'keli' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('keli', '藤本 諒', '2020-05-16 03:06:25', '2020-05-16 03:06:25', 'denis.sawayn@weinathalvorson.biz')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/64" for 127.0.0.1 at 2020-05-16 12:06:25 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 64 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 2.4ms)
+  [1m[35m (5.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'selina' LIMIT 1[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('selina', '佐野 陽太', '2020-05-16 03:07:06', '2020-05-16 03:07:06', 'grady@raynor.net')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'desire_mcdermott' LIMIT 1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('desire_mcdermott', '久保 陽斗', '2020-05-16 03:07:06', '2020-05-16 03:07:06', 'brendon@dibbertboyle.name')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'eusebio_lemke' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('eusebio_lemke', '竹内 直樹', '2020-05-16 03:07:06', '2020-05-16 03:07:06', 'cletus@borerabshire.biz')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 12:07:06 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.4ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 2.7ms)
+  [1m[35m (5.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'page' LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('page', '太田 大輔', '2020-05-16 03:07:06', '2020-05-16 03:07:06', 'irmgard.kling@wintheiser.com')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/68" for 127.0.0.1 at 2020-05-16 12:07:06 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"68"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 68 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 4.3ms)
+  [1m[35m (4.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/10000" for 127.0.0.1 at 2020-05-16 12:07:06 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"10000"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10000 LIMIT 1[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 3.1ms)
+Started GET "/users/10000" for 127.0.0.1 at 2020-05-16 12:07:11 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"10000"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10000 LIMIT 1[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 4.4ms)
+  [1m[35m (3.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'oliver' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('oliver', '中村 陽斗', '2020-05-16 03:09:24', '2020-05-16 03:09:24', 'edmundo.stanton@conroy.info')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'williams.hickle' LIMIT 1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('williams.hickle', '山田 太一', '2020-05-16 03:09:24', '2020-05-16 03:09:24', 'tom_hermiston@howellupton.info')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'deon.wisozk' LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('deon.wisozk', '高田 大樹', '2020-05-16 03:09:24', '2020-05-16 03:09:24', 'enda@zulaufrice.info')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users" for 127.0.0.1 at 2020-05-16 12:09:24 +0900
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 2.4ms)
+  [1m[35m (4.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`account` = BINARY 'wally' LIMIT 1[0m
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO `users` (`account`, `name`, `created_at`, `updated_at`, `email`) VALUES ('wally', '松本 未来', '2020-05-16 03:09:24', '2020-05-16 03:09:24', 'lakenya@quigley.name')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/72" for 127.0.0.1 at 2020-05-16 12:09:24 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"72"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 72 LIMIT 1[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+  [1m[35m (5.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/10000" for 127.0.0.1 at 2020-05-16 12:09:24 +0900
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"10000"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10000 LIMIT 1[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 2.5ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[31mROLLBACK[0m
